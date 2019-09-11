@@ -9,7 +9,7 @@
     font-size: 40px;
     width: 100%;
     background: LightGray;
-    display: grid;
+    display: grid; /* lai izveidotu režģi, var taisit mate , bernos atsevišķus režģus*/
     grid-template-columns: 50px 50px 50px; /*sadala kvadratos, var taisit horizontali vair'ak tad janorada
     var likt %, fr(cik dalas nem no brivas vietas) vairak px*/
     grid-template-rows: 50px 50px 100px; /*rutinas var definet izmeru*/
@@ -18,6 +18,31 @@
     grid-gap: 10px 20px; /* taisa atstarpi gan uz augsu gan saniem*/
     grid-column: 2 / 4 /*var izmantot berniem, lai konkrets elements aiznem no 2 linijas lidz 4 horizontali*/
     grid-row: 2 / 4 /*var izmantot berniem, lai konkrets elements aiznem no 2 linijas lidz 4 vertikala virziena*/
-    justify-self: center; /*izmanto berniem, nosaka rutina atrashanas vietu, noklusejuma aiznem visu rutinu*/
+    justify-self: center; /*izmanto berniem, nosaka rutina horizontalo atrashanas vietu, noklusejuma aiznem visu rutinu*/
     z-index: /*izmanto berniem, kuram lielaka priekshroka, izmanto lai parklatu elementus*/
-    
+    align-self /* izmanto berniem, aiznem vertikalo rutinas vietu - centrs, start, end*/
+    justify-items: center; /*izmanto matei, var visiem elementiem noteikt horizontalo atrashanas vietu*/
+    align-items: end; /*izmanto matei, var visiem elementiem noteikt vertikalo atrashanas vietu*/
+    grid-template-areas:
+      "header header header"
+      "advert content content"
+      "footer footer footer";
+      /*uzime lapas saturu- kur atradisies berni ar konkreto nosaukumu ar . var izimet ka bus 
+      vieta bet nav definets berna vards*/
+      .item5 {
+        grid-area: footer;} /* izmanto konkretam bernam, panem footer vietu pec satura*/
+        grid-template-columns: 100px minmax(50px, 200px) /*nosaka ka viena kolona 100px un otra no 50-200px lai tris kolonam 
+        noteiktu jaraksta 3 reizes*/
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /*vertikali karto bernus ar min 60px */
+
+        mobilie vismaz 300px-400px
+        @media (min-width: 300px){
+            .container{
+              grid-template-columns: auto 1fr;
+              grid-template-rows: auto 1fr auto;
+              grid-template-areas:
+                "advert header"
+                "advert content"
+                "advert footer";/*shads dizains ja lidz 300px*/
+    /*display:none lieto lai sadalu vai kaut ko nerada, bet jabut definetai klasei
+
