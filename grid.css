@@ -1,0 +1,23 @@
+.d1{background:LightSkyBlue;}
+.d2{background:LightSalmon;}
+.d3{background:PaleTurquoise;}
+.d4{background:LightPink;}
+.d5{background:PaleGreen;}
+.d5{background:PaleGreen;}
+
+.container {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 50px 50px 50px; /*sadala kvadratos, var taisit horizontali vair'ak tad janorada
+    var likt %, fr(cik dalas nem no brivas vietas) vairak px*/
+    grid-template-rows: 50px 50px 100px; /*rutinas var definet izmeru*/
+    grid-column-gap: 50px; /*taisa atstarpes var px vai % vai fr*/
+    grid-row-gap: 5px; /*taisa atstarpes uz augshu*/
+    grid-gap: 10px 20px; /* taisa atstarpi gan uz augsu gan saniem*/
+    grid-column: 2 / 4 /*var izmantot berniem, lai konkrets elements aiznem no 2 linijas lidz 4 horizontali*/
+    grid-row: 2 / 4 /*var izmantot berniem, lai konkrets elements aiznem no 2 linijas lidz 4 vertikala virziena*/
+    justify-self: center; /*izmanto berniem, nosaka rutina atrashanas vietu, noklusejuma aiznem visu rutinu*/
+    z-index: /*izmanto berniem, kuram lielaka priekshroka, izmanto lai parklatu elementus*/
+    
